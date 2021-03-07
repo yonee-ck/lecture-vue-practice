@@ -5,6 +5,7 @@ const tag = '[MainController]'
 
 export default {
   init() {
+    // TODO: browser 기본 발생 이벤트는 뭐가 있는
     FormView.setup(document.querySelector('form'))
         .on('@submit', e => this.onSubmit(e.detail.input))
         .on('@reset', e => this.onResetForm())
@@ -19,7 +20,7 @@ export default {
       this.onSearchResult(data)
     })
     this.onSearchResult([])
-  }
+  },
 
   onSubmit(input) {
     console.log(tag, 'onSubmit()', input)
